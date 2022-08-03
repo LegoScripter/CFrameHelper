@@ -1,0 +1,9 @@
+getgenv() function GenerateCFrameScript(GenMessage, CFrameValue)
+    return [[
+-- // ]]..GenMessage..[[ \\ --
+local HRP = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart')
+if HRP then
+    HRP.CFrame = CFrame.new(]]..CFrameValue..[[)
+end
+]]
+end
